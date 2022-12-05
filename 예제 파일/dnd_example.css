@@ -1,0 +1,39 @@
+body {
+    background-color: #3d4e56fa;
+    margin: 0;
+    padding: 0;
+}
+  
+.body {
+    display: flex;
+}
+  
+button {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 8px;
+    margin: 12px;
+    cursor: move;
+    font-size: 30px;
+    background: #eaeaea4f;
+}
+  
+.container {
+    margin: 10px;
+    padding: 10px;
+    background-color: #b5c1dc57;
+    border-radius: 8px;
+}
+    
+.container2 {
+    margin: 10px;
+    padding: 55px;
+    background-color: #b5c1dc57;
+    border-radius: 8px;
+}
+  
+  
+.draggable.dragging {
+    opacity: 0.5;
+}
