@@ -1,0 +1,21 @@
+.container {
+    background-color: beige;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around; /* 양쪽으로 맞추기 */
+}
+.box {
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px; /* 공백 */
+    width: 30%; /* 자기가 쓸 수 있는 영억의 %만큼 쓴다 */
+}
+
+.card {
+    border: 1px solid blue;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: lightgray;
+    margin: 10px;
+}
