@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        alert("Process-0");   //alert는 알림창
+        alert("Process-10");
+        alert("Process-115");
+        
+        
+        window.onload = function() {
+            document.querySelector("h1").style.color = "red";  //웹브라우저 자체를 담당하는 window라는 객체가, 웹 문서를 불러올때, 문서가 사용되는 시점에 실행되는 onload라는 함수를 내가 다시 재정의 한다는 개념이다.
+                                                               //window.onload라는 객체 자체가 js자체는 위에서 밑으로 읽어가는 객체인데  html 문서가 길어진다면, 내가 만든 자바스크립트가 아래쪽에 놓여있다면 <hr>"보기안좋기"</hr>때문에 사용하는객체임!
+            
+            let d = document.querySelector("div")   
+            d.border = "1px solid gray"
+            d.padding = "10px" 
+            d.innerHTML = "<h5>동의과학대학교 인공지능컴퓨터정보과</h5><hr><h6>서정</h6>";
+            document.querySelector("h6").style.color = "blue"       //h2의 글꼴색깔 파랑
+            document.querySelector("h6").style.backgroundColor = "green"  //h2의 배경색깔 그린
+            document.querySelector("h6").innerHTML = "자바스크립트";   //같은 h1이여도 마지막에 한 window.onload 로 적용됨
+             
+            //d.innerHTML에 있는 h5랑 h6을 출력해서 h6이 밑에넣은 기능에 맞게끔 출력할수있게끔 하게 도와주세요 
+            
+           }
+    </script>
+</head>
+<body>
+     <h1>
+       querySelector 
+    </h1>
+   
+    
+    
+    <h3 onclick="alert('Javascript Clicked!!!');">Javascript</h3>
+    
+    <h3 onclick="alert('서정호 Clicked!!!');">서정호</h3>
+
+    <h5>
+        hi
+    </h5>
+    
+</body>
+</html>
