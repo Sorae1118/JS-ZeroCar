@@ -1,0 +1,49 @@
+.box{
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius : 5px;
+    margin : 2px;
+    background-color: skyblue;
+    
+    
+}
+.card{  
+    border: 1px solid blue;
+    padding-bottom : 10px;
+    border-radius: 5px;
+    background-color: darkseagreen;
+    margin: 15px;
+    display: inline-flex;
+    margin-left: 70px;
+}
+.cardbox{    
+    border : 1px solid black;
+    background-color: pink;
+    padding : 10px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    padding : 20px;
+    justify-content: space-around; 
+}
+
+.buttons{
+    flex-direction: row-reverse;
+    font-size: 13px;
+    text-align: center;
+    flex-direction: column;
+    float: right;
+    background-color: yellow    ;
+}
+.draggingCard{  
+    border-color : red;
+    
+}
+.overBox{
+    background-color: aquamarine;
+}
+.overCard{
+    background-color: coral;
+}

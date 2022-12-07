@@ -1,0 +1,41 @@
+<!-- article
+- article은 내용이 독립적이다.
+- article 태그는 section과 다르게 독립적으로 존재 가능, 재사용 가능
+- article이 더 구체적
+- 주로 블로그글, 포럼, 뉴스 기사 등을 묶는데 사용 -->
+
+<!-- section
+- section은 주제별로 구분한 그룹
+- 논리적으로 관계있는 요소 또는 문서를 분리할 때 사용
+- 다른 주제의 문서를 구분 짓기 위해 사용(주제별 영역들을 그룹화)
+
+* 논리적인 관계가 없는 요소들을 그룹화 할 경우 div 사용 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- example -->
+    <section>
+        <h1>Hot Topic</h1>
+        <section>
+            <p>World</p>
+            <article>World news 1</article>
+            <article>World news 2</article>
+            <article>World news 3</article>
+        </section>
+        <section>
+            <p>Sport</p>
+            <article>Sport news 1</article>
+            <article>Sport news 2</article>
+            <article>Sport news 3</article>
+        </section>
+    </section>    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<img>
+- src = "이미지 파일 경로"
+- alt = "대체용 텍스트"
+- width = "가로 크기"
+- height = "세로 크기"
+- % : 브라우저 창의 크기 단위
+- px : 픽셀 단위
+
+---------------------------------------------
+<video>
+
+example
+<video src='동영상 주소' width='400' controls autoplay></video>
+
+- src : 비디오 파일의 주소
+- controls : 컨트롤러 표시
+- autoplay : 자동 재생
+- loop : 반복 재생
+- width : 영상의 가로 길이
+- height : 영상의 세로 길이
+- muted : 음소거
+
