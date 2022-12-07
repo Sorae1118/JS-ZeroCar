@@ -1,0 +1,21 @@
+color : 글자 색 변경
+- #ff0000 사용 가능
+  #뒤에 2자리씩 끊어서 R G B로 표현
+  https://htmlcolorcodes.com/ 다양한 컬러색을 따올 수 있음
+
+background-color : 배경색
+
+font-size : 글씨 크기
+- px, vw, em, % 등
+
+font-family : 글씨체
+
+text-align : 위치 정렬
+- right, left, center
+
+text-decoration : 밑줄 없애기
+- 주로 링크 밑줄 없앨 때 사용
+
+text-shadow : 그림자
+- text-shadow : 그림자 색깔 가로위치 세로위치;
+
