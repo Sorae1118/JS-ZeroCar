@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고전 이벤트 모델2</title>
+    <script>
+        function textBlue() {
+            this.style.color='blue'; 
+        }
+        function textblack() {
+            this.style.color='black';
+        }
+        window.onload = function() { 
+            let h1 = document.querySelector("h1");
+            h1.onmouseover = textBlue;  // 함수명만적어주기 ()적으면 실행되버림
+            h1.onmouseout = textblack;
+            //-----------------------------------------
+            let h2array = document.getElementsByTagName("h2");
+            //let h2Array = document.querySelectorAll("h2");
+            for(let item of h2array) {
+                item.onmouseover = textBlue;
+                item.onmouseout = textblack;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1> Inline Event Model</h1>
+    <hr>
+    <h2>프론트엔드프로그래밍</h2>
+    <h2>자바프로그래밍</h2>
+    <h2>데이터베이스</h2>
+    <h2>이산수학</h2>
+    <h2>오픈소스소프트웨어</h2>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표준 이벤트 모델</title>
+    <script>
+        // 이벤트 핸들러 생성
+        function textBlue() {
+            this.style.color='blue'; 
+        }
+        function textblack() {
+            this.style.color='black';
+        }
+        //태두리 1px solid gray
+        //내부여백 10px
+        //배경색 lightgray
+        function drawBorder() { 
+            this.style.border = "1px solid gray";
+            this.style.padding = "10px"  ;
+            this.style.background = "lightgray";
+        }
+        function clearBorder(){
+            this.style.border = "none";
+            this.style.padding = "1px";
+            this.style.background = "white";
+        }
+        
+        // 이벤트 핸들러 연결하기
+        window.onload = function() {  //표준이벤트모델방식
+            let h1 = document.querySelector("h1");
+            h1.addEventListener("mouseover", textBlue);
+            h1.addEventListener("mouseover", drawBorder);
+            h1.addEventListener("mouseout", textblack);
+            h1.addEventListener("mouseout", clearBorder);
+            //-----------------------------------------
+            let h2array = document.getElementsByTagName("h2");
+            //let h2Array = document.querySelectorAll("h2");
+            for(let item of h2array) {
+                item.addEventListener("mouseover", textBlue);
+                item.addEventListener("mouseover", drawBorder);
+                item.addEventListener("mouseout", textblack); //이벤트이름만적기
+                item.addEventListener("mouseout", clearBorder);
+            }
+            //---------------------------------------------
+            document.querySelector("#borderOff").onclick = function() {
+                //h1의 onmouseover, onmouseout의 테두리관련 핸들러를 제거한다.
+                let h1 = document.querySelector("h1");
+                h1.removeEventListener("mouseover", drawBorder);
+                h1.removeEventListener("mouseout", clearBorder);    
+            }
+            document.querySelector("#borderOn").onclick = function() {
+                //h1의 onmouseover, onmouseout의 테두리관련 핸들러를 다시 활성화
+                let h1 = document.querySelector("h1");
+                h1.addEventListener("mouseover", drawBorder);
+                h1.addEventListener("mouseout", clearBorder);    
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1> Inline Event Model</h1>
+    <hr>
+    <button id="borderOff">H1테두리 관리 이벤트핸들러 제거하기H1</button>
+    <button id="borderOn">H1테두리 관리 이벤트핸들러 연결하기H1</button>
+    <h2>프론트엔드프로그래밍</h2>
+    <h2>자바프로그래밍</h2>
+    <h2>데이터베이스</h2>
+    <h2>이산수학</h2>
+    <h2>오픈소스소프트웨어</h2>
+</body>
+</html>

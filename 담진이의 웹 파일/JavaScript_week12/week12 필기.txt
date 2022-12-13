@@ -1,0 +1,39 @@
+2. jQuery 문장 구조
+    1. 기본 문장 구조
+        @ $(selector).action()
+            - jQuery를 이용, html 요소를 선택(query)하여 필요한 처리(action)를 한다
+            - $ 대신 jQuery를 사용해도 됨
+            - selector 처리대상 html요소를 선택하고
+              action 선택된 요소에 대해 필요한 처리를 한다
+        @ examples
+            $("p").hide();
+            $(this).slide();
+            $(".class").hide();
+            $("#id").hide();
+    2. 코딩의 시작
+        <script>
+            $(document).ready(function(){
+                //---------
+            });
+        </script>
+        @ JavaScript (without jQuery)
+            window.onload = function(){
+                //-----
+            }
+
+3. jQuery 사용
+    jQuery Effects
+        @ hide/show
+            $(selector).hide([speed, callback]); 없어짐
+            $(selector).show([speed, callback]); 보여줌
+            $(selector).toggle([speed, callback]); 전원버튼처럼 작동 
+        @ fading
+            $(selector).fadeOut([speed, callback]);
+            $(selector).fadeIn([speed, callback]);
+            $(selector).fadeToggle([speed, callback]);
+        @ sliding
+            $(selector).slideUp([speed, callback]);
+            $(selector).slideDown([speed, callback]);
+            $(selector).slideToggle([speed, callback]);
+        @ animation
+            $(selector).animate({style 속성});
