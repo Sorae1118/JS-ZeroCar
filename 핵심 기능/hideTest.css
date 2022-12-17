@@ -28,8 +28,7 @@
     color: #4E4C48;
     font-size: 1.5em;
 }
-.container{
-    text-align: center;
-    background-color: #e74c3c;
-    overflow: scroll;
-  }   
+ 
+#container1 {
+    background-color: gray;
+}
