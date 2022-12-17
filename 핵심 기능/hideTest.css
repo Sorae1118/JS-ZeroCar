@@ -47,3 +47,9 @@
     background-attachment: fixed;
     background-size: cover;
 }
+
+.blink {
+    -webkit-animation: blink 0.5s ease-in-out infinite alternate;
+    -moz-animation: blink 0.5s ease-in-out infinite alternate;
+    animation: blink 0.5s ease-in-out infinite alternate;
+}
