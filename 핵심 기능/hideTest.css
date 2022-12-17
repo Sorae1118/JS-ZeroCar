@@ -53,3 +53,29 @@
     -moz-animation: blink 0.5s ease-in-out infinite alternate;
     animation: blink 0.5s ease-in-out infinite alternate;
 }
+
+.click{
+    position: absolute;
+    right: +600px;
+    bottom: +283px;
+}
+.container2 {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.draggable {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 8px;
+    margin: 12px;
+    cursor: move;
+    font-size: 30px;
+}
+
+.draggable.dragging {
+    opacity: 0.5;
+}
+
