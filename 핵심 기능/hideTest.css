@@ -20,7 +20,7 @@
 }
 .item {
     width: 200px;
-    height: 200px;
+    height: 100px;
     margin: 50px auto;
     padding-top: 75px;
     background: rgba(255,85,0, .7);
@@ -28,7 +28,14 @@
     color: #4E4C48;
     font-size: 1.5em;
 }
- 
+
 #container1 {
     background-color: gray;
+}
+
+#cardBox {
+    background-color: beige;
+    padding: 250px;
+    display: flex;
+    justify-content: space-around;
 }
