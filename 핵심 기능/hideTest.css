@@ -28,12 +28,8 @@
     color: #4E4C48;
     font-size: 1.5em;
 }
-#container1 {
-    background-color: gray;
-}
 
 #cardBox {
-    background-color: beige;
     padding: 250px;
     display: flex;
     justify-content: space-around;
