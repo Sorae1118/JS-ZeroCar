@@ -3,6 +3,11 @@ $(window).ready(function () {
     $(".d1").hide();
     $("#dmd").fadeIn(1000);
     $(".d1").delay(1000).fadeIn(1000);
+
+    $("#btn1").click( function(){
+        let location = document.querySelector("#cardBox").offsetTop;
+        window.scrollTo({ top: location, behavior: "smooth" });
+    })
 });
 
 window.onload = function () {
