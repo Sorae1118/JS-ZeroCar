@@ -1,5 +1,6 @@
 #dmd {
     width: 100%;
+    font-size: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,7 +17,6 @@
 #btn1 {
     border: none;
     font-size: 30px;
-    background-color: white;
     cursor: pointer;
     align-items: center;
     font-family: 'GmarketSansBold';
@@ -32,9 +32,10 @@
     margin: 50px auto;
     padding-top: 75px;
     background: rgba(255,85,0);
+    border-radius: 30px;
     text-align: center;
     color: #4E4C48;
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 #cardBox {
