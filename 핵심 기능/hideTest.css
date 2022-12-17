@@ -34,3 +34,8 @@
     display: flex;
     justify-content: space-around;
 }
+
+* {
+    background-attachment: fixed;
+    background-size: cover;
+}
