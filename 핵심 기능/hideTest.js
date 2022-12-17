@@ -1,7 +1,4 @@
-$(window).onload(function(){
-	$("#dmd").show
+$(window).ready(function(){
+	$("#dmd").hide();
+    $("#dmd").show(3000);
 });
-
-window.onload = function() {
-    document.getElementById("dmd").style.display = "none";
-}
