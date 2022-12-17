@@ -5,13 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="hideTest.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="jquery-3.6.1.min.js"></script>
     <script src="hideTest.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="d1">
         <h1 id="dmd">Start</h1>
     </div>
+    <div class="item" data-aos="fade-down">fade-down</div>
+    <div class="item" data-aos="fade-right">fade-right</div>    
+    <div class="item" data-aos="fade-left">fade-left</div>
+    <div class="item" data-aos="fade-up-right">fade-up-right</div>
+    <div class="item" data-aos="fade-up-left">fade-up-left</div>
+    <div class="item" data-aos="fade-down-right">fade-down-right</div>
+    <div class="item" data-aos="fade-down-left">fade-down-left</div>
+
+    <script> 
+        AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+    </script>
 </body>
 </html>
