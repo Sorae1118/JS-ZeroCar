@@ -7,6 +7,17 @@
     cursor: pointer;
 }
 
+.d1 {
+    width: 1200px;
+    height: 30vh;
+    text-align: center;
+}
+
+#btn1 {
+    border: none;
+    font-size: 30px;
+    background-color: white;
+}
 .item {
     width: 200px;
     height: 200px;
