@@ -18,6 +18,13 @@
     font-size: 30px;
     background-color: white;
     cursor: pointer;
+    align-items: center;
+    font-family: 'GmarketSansBold';
+    color: #5B2386;
+    background-color: #FCEE21;
+    border-radius: 30px;
+    padding: 10px 40px;
+    word-break: keep-all;    
 }
 .item {
     width: 200px;
