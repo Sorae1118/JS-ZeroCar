@@ -6,6 +6,7 @@
     align-items: center;
     height: 50vh;
     color: white;
+    font-family: fa;
 }
 
 .d1 {
@@ -86,3 +87,7 @@ body {
     opacity: 0.5;
 }
 
+@font-face {
+    src: url(BMJUA_otf.otf);
+    font-family: fa;
+}
