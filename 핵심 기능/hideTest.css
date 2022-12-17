@@ -1,3 +1,10 @@
-h1 {
-    text-align: center;
+.d1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#dmd {
+    cursor: pointer;
 }

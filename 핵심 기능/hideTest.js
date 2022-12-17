@@ -1,4 +1,8 @@
 $(window).ready(function(){
 	$("#dmd").hide();
-    $("#dmd").show(3000);
+    $("#dmd").fadeIn(2000);
 });
+
+function mousePointer() {
+    
+}
