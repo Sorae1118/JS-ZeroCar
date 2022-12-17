@@ -1,4 +1,4 @@
 $(window).ready(function(){
 	$("#dmd").hide();
-    $("#dmd").show(3000);
+    $("#dmd").fadeIn(3000);
 });
