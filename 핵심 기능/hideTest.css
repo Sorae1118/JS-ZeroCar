@@ -43,9 +43,10 @@
     justify-content: space-around;
 }
 
-* {
+body {
     background-attachment: fixed;
     background-size: cover;
+    background-color: black;
 }
 
 .blink {
