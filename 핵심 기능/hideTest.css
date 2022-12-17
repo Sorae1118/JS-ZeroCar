@@ -47,3 +47,8 @@
     background-attachment: fixed;
     background-size: cover;
 }
+.click{
+    position: absolute;
+    right: +600px;
+    bottom: +283px;
+}
