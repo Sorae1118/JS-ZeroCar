@@ -56,4 +56,3 @@ window.onload = function () {
         ).element;
     }
 }
-
