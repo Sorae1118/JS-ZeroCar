@@ -41,9 +41,7 @@ function selectQuiz(quizNo) {
     getCardsFromWords(words);
 }
 
-
-window.onload = function () {
-    selectQuiz(1);
+function dragCards() {
     const draggables = document.querySelectorAll(".draggable");
     const containers = document.querySelectorAll(".container2");
 
@@ -88,4 +86,9 @@ window.onload = function () {
             { offset: Number.NEGATIVE_INFINITY },
         ).element;
     }
+}
+
+window.onload = function () {
+    selectQuiz(1);
+    dragCards();
 }
