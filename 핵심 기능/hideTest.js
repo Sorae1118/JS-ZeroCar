@@ -14,8 +14,31 @@ $(window).ready(function () {
     })
     
 });
+//정호
+function getCardsFromWords(words) {
+    let cardsHTML = "";
+    let aCardHTML = "";
+    let count = 1;
+    let changeCount = 0;
+    for(let word of words) {
+        aCardHTML = `<div class="draggable" draggable="true" originalOrder="${count++}" currentOrder="${changeCount}">${word}</div>`
+        cardsHTML += aCardHTML;
+    }
+    // box 안에, 위에서 생성한 카드들을 추가한다.
+    document.querySelector(".cardBox1").innerHTML = cardsHTML;
+}
+function selectQuiz(quizNo) {
+    if(quizNo >= quizSet.quiz.length){
+        console.log("퀴즈 번호가 범위를 벗어났습니다.");
+        return;
+    }
+    let words = quizSet.quiz[quizNo].eng.split(" ");
+    getCardsFromWords(words);
+}
+
 
 window.onload = function () {
+    selectQuiz(1);
     const draggables = document.querySelectorAll(".draggable");
     const containers = document.querySelectorAll(".container2");
 

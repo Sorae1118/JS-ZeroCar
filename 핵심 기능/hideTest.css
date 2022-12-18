@@ -110,9 +110,11 @@ body {
     height: 70px;
     border: none;
     border-radius: 8px;
-    margin: 12px;
+        margin: 12px;
     cursor: move;
     font-size: 30px;
+    color : rgb(250, 209, 62);
+    border: 3px solid yellow;
 }
 
 .draggable.dragging {
@@ -122,4 +124,14 @@ body {
 @font-face {
     src: url(BMJUA_otf.otf);
     font-family: fa;
+}
+
+
+.box{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius : 5px;
+    margin : 10px;
+    width : 30%;
+    color :rgb(250, 209, 62)
 }
