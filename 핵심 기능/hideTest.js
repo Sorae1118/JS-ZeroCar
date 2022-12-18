@@ -9,11 +9,6 @@ $(window).ready(function () {
         window.scrollTo({ top: location, behavior: "smooth" });
     })
     $(".item").click( function(){
-        console.log($(".item"));
-        if($(this)){
-            $(".item").not().removeClass("selectItem");
-            $(this).addClass("selectItem");
-        }
         let location = document.querySelector(".container2").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
@@ -30,7 +25,7 @@ function getCardsFromWords(words) {
         cardsHTML += aCardHTML;
     }
     // box 안에, 위에서 생성한 카드들을 추가한다.
-    document.querySelector(".cardBox1").innerHTML = cardsHTML;
+    document.querySelector(".cardbox").innerHTML = cardsHTML;
 }
 function selectQuiz(quizNo) {
     if(quizNo >= quizSet.quiz.length){
