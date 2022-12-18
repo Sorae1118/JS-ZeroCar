@@ -13,7 +13,7 @@ $(window).ready(function () {
         window.scrollTo({ top: location, behavior: "smooth" });
     })
     $("#right").click( function(){
-        let location = document.querySelector("#cardBox").offsetTop;
+        let card = document.querySelector("#draggable").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
     
