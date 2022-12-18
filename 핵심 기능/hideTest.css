@@ -159,6 +159,20 @@ body {
 
 }
 
-#checkBtn {
+#right{
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    align-items: center;
+    font-family: 'GmarketSansBold';
+    color: #5B2386;
+    background-color:rgb(250, 209, 62);
+    border-radius: 30px;
+    padding: 10px 40px;
+    word-break: keep-all;
+    font-family: fa; 
+}
 
+.rightdiv {
+    text-align: center;
 }
