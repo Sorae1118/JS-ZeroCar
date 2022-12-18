@@ -12,9 +12,8 @@ $(window).ready(function () {
         let location = document.querySelector(".container2").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
-    $("#right").click( function(){
-        let card = document.querySelector("#draggable").offsetTop;
-        window.scrollTo({ top: location, behavior: "smooth" });
+    $("#checkBtn").click( function(){
+        alert("정답입니다!!")
     })
     
 });
