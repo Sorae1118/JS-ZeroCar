@@ -127,6 +127,7 @@ body {
     color : rgb(250, 209, 62);
     border: 3px solid yellow;
     float: left;
+    text-align: center;
 }
 
 .draggable.dragging {
