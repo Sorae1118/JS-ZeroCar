@@ -12,25 +12,46 @@ $(window).ready(function () {
         let location = document.querySelector(".container2").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
-    $("#right").click( function(){
-        let location = document.querySelector("#cardBox").offsetTop;
-        window.scrollTo({ top: location, behavior: "smooth" });
-    })
-    
 });
+
 //정호
 function getCardsFromWords(words) {
+    let field = document.querySelector('.randomCard');
+    let fieldRect = field.getBoundingClientRect();
+    let xMin = 0;
+    let yMin = 0;
+    let xMax = fieldRect.width;
+    let yMax = fieldRect.height;
+
     let cardsHTML = "";
-    let aCardHTML = "";
+    let newDiv = "";
     let count = 1;
     let changeCount = 0;
-    for(let word of words) {
-        aCardHTML = `<div class="draggable" draggable="true" originalOrder="${count++}" currentOrder="${changeCount}">${word}</div>`
-        cardsHTML += aCardHTML;
+    for(let word of words) { //단어 만큼 div를 만들어줌
+        //newDiv = `<div draggable="true" originalOrder="${count++}" currentOrder="${changeCount}">${word}</div>`
+        let newDiv = document.createElement('div');
+        newDiv.innerHTML = word;
+        newDiv.classList.add("draggable");
+
+        let x = randomNumber(xMin, xMax);
+        let y = randomNumber(yMin, yMax);
+      
+        newDiv.style.position = 'absolute';
+        newDiv.style.left = `${x}px`;
+        newDiv.style.top = `${y}px`;
+
+        field.appendChild(newDiv);
     }
+
     // box 안에, 위에서 생성한 카드들을 추가한다.
-    document.querySelector(".cardBox1").innerHTML = cardsHTML;
+    //let card = document.querySelector(".randomCard");
+    //card.innerHTML = cardsHTML;
 }
+
+function randomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
 function selectQuiz(quizNo) {
     if(quizNo >= quizSet.quiz.length){
         console.log("퀴즈 번호가 범위를 벗어났습니다.");

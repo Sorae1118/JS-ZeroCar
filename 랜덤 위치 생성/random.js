@@ -1,9 +1,9 @@
 function createDiv(count) {
     const field = document.querySelector('.field');
     const fieldRect = field.getBoundingClientRect();
-
-    const xMin = 100;
-    const yMin = 100;
+    //const fieldRect2 = window.pageYOffset + field.getBoundingClientRect().top;
+    const xMin = 0;
+    const yMin = 0;
     const xMax = fieldRect.width;
     const yMax = fieldRect.height;
     
@@ -19,7 +19,7 @@ function createDiv(count) {
       
         newDiv.style.width = `${30}px`; 
         newDiv.style.height = `${30}px`;
-        newDiv.style.backgroundColor = 'blue';
+        newDiv.style.backgroundColor = 'yellow';
         field.appendChild(newDiv);
     }
 }
@@ -29,5 +29,5 @@ function randomNumber(min, max) {
 }
 
 window.onload = function() {
-    createDiv(10);
+    createDiv(5);
 }

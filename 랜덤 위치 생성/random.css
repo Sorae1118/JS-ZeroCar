@@ -1,0 +1,15 @@
+.field {
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    margin: 50px auto;
+    background: purple;
+    position: relative;
+}
+.field2 {
+    width: 600px;
+    height: 1000px;
+    padding: 20px;
+    margin: 50px auto;
+    background: black;
+}
