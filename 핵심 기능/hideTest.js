@@ -25,7 +25,7 @@ function getCardsFromWords(words) {
         cardsHTML += aCardHTML;
     }
     // box 안에, 위에서 생성한 카드들을 추가한다.
-    document.querySelector(".cardbox").innerHTML = cardsHTML;
+    document.querySelector(".cardBox1").innerHTML = cardsHTML;
 }
 function selectQuiz(quizNo) {
     if(quizNo >= quizSet.quiz.length){
