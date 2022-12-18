@@ -8,6 +8,11 @@ $(window).ready(function () {
         let location = document.querySelector("#cardBox").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
+    $(".item").click( function(){
+        let location = document.querySelector(".container2").offsetTop;
+        window.scrollTo({ top: location, behavior: "smooth" });
+    })
+    
 });
 
 window.onload = function () {
