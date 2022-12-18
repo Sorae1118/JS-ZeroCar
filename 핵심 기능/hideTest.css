@@ -126,6 +126,7 @@ body {
     font-size: 30px;
     color : rgb(250, 209, 62);
     border: 3px solid yellow;
+    float: left;
 }
 
 .draggable.dragging {
