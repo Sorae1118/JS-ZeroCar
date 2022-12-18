@@ -14,6 +14,9 @@ $(window).ready(function () {
     })
     $("#checkBtn").click( function(){
         alert("정답입니다!!")
+        //let check = document.querySelectorAll(".draggable이나 cardBox1을 해서 찾아준후 roginalOrder 번호를 체크하여 찾으면되는데 그게안됨")
+        //check[1] 하면 정보가 나오긴하는데 정보에서 orginaleorder을 못가져오겟음
+        //draggable을 쿼리샐랙터올로해서 찾으면 웹사이트에서 순서를 바꿔도 바꾼채로 가져오는게 아니라 만들어진대로 그대로 가져옴 cardbox1을 가져와야할거같음
     })
     
 });
