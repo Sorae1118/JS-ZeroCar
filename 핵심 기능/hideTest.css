@@ -71,6 +71,10 @@
     font-family: fa;
 }
 
+.selectItem {
+    background: rgb(234, 126, 18);
+}
+
 #cardBox {
     padding: 250px;
     display: flex;
