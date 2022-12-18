@@ -81,6 +81,13 @@
     justify-content: space-around;
 }
 
+.right {
+    background-color: blueviolet;
+    padding: 250px;
+    display: flex;
+    justify-content: space-around;
+}
+
 body {
     background-attachment: fixed;
     background-size: cover;
