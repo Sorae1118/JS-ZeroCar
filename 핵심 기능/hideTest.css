@@ -159,7 +159,7 @@ body {
 
 }
 
-#right{
+#checkBtn{
     border: none;
     font-size: 30px;
     cursor: pointer;
@@ -171,8 +171,5 @@ body {
     padding: 10px 40px;
     word-break: keep-all;
     font-family: fa; 
-}
-
-.rightdiv {
-    text-align: center;
+    margin-top: 100px;
 }
