@@ -12,6 +12,10 @@ $(window).ready(function () {
         let location = document.querySelector(".container2").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
+    $("#right").click( function(){
+        let location = document.querySelector("#cardBox").offsetTop;
+        window.scrollTo({ top: location, behavior: "smooth" });
+    })
     
 });
 //정호
