@@ -9,11 +9,6 @@ $(window).ready(function () {
         window.scrollTo({ top: location, behavior: "smooth" });
     })
     $(".item").click( function(){
-        console.log($(".item"));
-        if($(this)){
-            $(".item").not().removeClass("selectItem");
-            $(this).addClass("selectItem");
-        }
         let location = document.querySelector(".container2").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
@@ -43,7 +38,7 @@ function selectQuiz(quizNo) {
 
 function dragCards() {
     const draggables = document.querySelectorAll(".draggable");
-    const containers = document.querySelectorAll(".container2");
+    const cardBox1 = document.querySelectorAll(".cardBox1");
 
     draggables.forEach(draggable => {
         draggable.addEventListener("dragstart", () => {
@@ -54,22 +49,22 @@ function dragCards() {
             draggable.classList.remove("dragging");
         });
     });
-    containers.forEach(container => {
-        container.addEventListener("dragover", e => {
+    cardBox1.forEach(cardBox1 => {
+        cardBox1.addEventListener("dragover", e => {
             e.preventDefault();
-            const afterElement = getDragAfterElement(container, e.clientX);
+            const afterElement = getDragAfterElement(cardBox1, e.clientX);
             const draggable = document.querySelector(".dragging");
             if (afterElement === undefined) {
-                container.appendChild(draggable);
+                cardBox1.appendChild(draggable);
             } else {
-                container.insertBefore(draggable, afterElement);
+                cardBox1.insertBefore(draggable, afterElement);
             }
         });
     });
 
-    function getDragAfterElement(container, x) {
+    function getDragAfterElement(cardBox1, x) {
         const draggableElements = [
-            ...container.querySelectorAll(".draggable:not(.dragging)"),
+            ...cardBox1.querySelectorAll(".draggable:not(.dragging)"),
         ];
 
         return draggableElements.reduce(
