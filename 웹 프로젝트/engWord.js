@@ -13,12 +13,14 @@ $(window).ready(function () {
         let location = document.querySelector(".rank").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
+    $(".container2").hide();
     $(".item").click( function(){
         console.log($(".item"));
         if($(this)){
             $(".item").not().removeClass("selectitem");
             $(this).addClass("selectitem");
         }
+        $(".container2").fadeIn();
         let location = document.querySelector(".container2").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
