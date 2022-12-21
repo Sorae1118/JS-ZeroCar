@@ -44,11 +44,9 @@ function getCardsFromWords(words) {
         let x = randomNumber(xMin, xMax);
         let y = randomNumber(yMin, yMax);
       
-        newDiv.draggable="true"
         newDiv.style.position = 'absolute';
         newDiv.style.left = `${x}px`;
         newDiv.style.top = `${y}px`;
-
 
         field.appendChild(newDiv);
     }
@@ -73,7 +71,7 @@ function selectQuiz() {
 
 function dragCards() {
     const draggables = document.querySelectorAll(".draggable");
-    const cardBox1 = document.querySelectorAll(".randomCard");
+    const cardBox1 = document.querySelectorAll(".cardBox1");
 
     draggables.forEach(draggable => {
         draggable.addEventListener("dragstart", () => {
