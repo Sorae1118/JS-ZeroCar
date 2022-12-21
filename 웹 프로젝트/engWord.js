@@ -83,7 +83,6 @@ function addEvent() {
         box.addEventListener("drop", onDropBox);
     }
 }
-
 window.onload = function () {
     let items = document.getElementsByClassName("item");
     console.log(items);
@@ -148,6 +147,3 @@ function onDragLeaveBox(ev) {
 function onDropBox(ev) {
     dragOverBox.appendChild(draggingCard); 
 }
-
-
-
