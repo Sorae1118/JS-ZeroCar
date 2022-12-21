@@ -137,6 +137,7 @@ body {
     border: 3px solid yellow;
     float: left;
     text-align: center;
+    position: absolute;
 }
 
 .draggable.dragging {
@@ -159,8 +160,8 @@ body {
 }
 
 .randomCard {
-    width: 1000px;
-    height: 200px;
+    width: 100%;
+    height: 400px;
     font-size: 50px;
     align-items: center;
     position: relative;
