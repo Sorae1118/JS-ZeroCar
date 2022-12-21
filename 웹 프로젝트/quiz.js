@@ -19,5 +19,10 @@ let quizSet = {
             kor: "내 말이 그 말이야."
         }
     ]
-
 }
+
+function answer(quizNo) {
+    let answerArray = quizSet.quiz[quizNo].eng.split(" ");
+    return answerArray;
+}
+console.log(answer(2));
