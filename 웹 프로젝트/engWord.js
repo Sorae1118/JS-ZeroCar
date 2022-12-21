@@ -67,35 +67,35 @@ function selectQuiz() {
 }
 
 function dragCards() {
-    const draggables = document.querySelectorAll(".draggable");
-    const containers = document.querySelectorAll(".randomCard");
+    const draggables = document.querySelectorAll(".card");
+    const randomCards = document.querySelectorAll(".randomCard");
 
-    draggables.forEach(draggable => {
-        draggable.addEventListener("dragstart", () => {
-            draggable.classList.add("dragging");
+    draggables.forEach(card => {
+        card.addEventListener("dragstart", () => {
+            card.classList.add("dragging");
         });
 
-        draggable.addEventListener("dragend", () => {
-            draggable.classList.remove("dragging");
+        card.addEventListener("dragend", () => {
+            card.classList.remove("dragging");
         });
     });
 
-    containers.forEach(container => {
-        container.addEventListener("dragover", e => {
-            e.preventDefault();
-        const afterElement = getDragAfterElement(container, e.clientX);
-        const draggable = document.querySelector(".dragging");
+    randomCards.forEach(randomCard => {
+        randomCard.addEventListener("dragover", e => {
+            e.preventDefault(); 
+        const afterElement = getDragAfterElement(randomCard, e.clientX);
+        const card = document.querySelector(".card");
         if (afterElement === undefined) {
-            container.appendChild(draggable);
+            randomCard.appendChild(card);
         } else {
-            container.insertBefore(draggable, afterElement);
+            randomCard.insertBefore(card, afterElement);
         }
         });
     });
 
-    function getDragAfterElement(container, x) {
+    function getDragAfterElement(randomCard, x) {
         const draggableElements = [
-        ...container.querySelectorAll(".draggable:not(.dragging)"),
+        ...randomCard.querySelectorAll(".draggable:not(.dragging)"),
         ];
 
         return draggableElements.reduce(
@@ -122,5 +122,5 @@ window.onload = function () {
     for(let item of items) {
         item.addEventListener("click", selectQuiz);
     }
-    //dragCards();
+    dragCards();
 }
