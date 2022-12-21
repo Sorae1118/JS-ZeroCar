@@ -63,7 +63,9 @@ function selectQuiz() {
         console.log("퀴즈 번호가 범위를 벗어났습니다.");
         return;
     }
+    let korean = quizSet.quiz[quizNo].kor;
     let words = quizSet.quiz[quizNo].eng.split(" ");
+    document.querySelector("#korean").innerHTML = korean;
     getCardsFromWords(words);
 }
 
