@@ -31,19 +31,15 @@ $(window).ready(function () {
     })
 
     $("#checkBtn").click(function(){
+        $(".container3").show();
+        let location = document.querySelector(".container3").offsetTop;
+        window.scrollTo({ top: location, behavior: "smooth" });
+        $('#loading').fadeIn(3000);
+        $('#loading').fadeOut();
         if(check()){
-            $(".container3").fadeIn(2000);
-            let location = document.querySelector(".container3").offsetTop;
-            window.scrollTo({ top: location, behavior: "smooth" });
-            $('#loading').fadeIn(3000);
-            $('#loading').fadeOut();
-            $(".container3").fadeIn(2000);
+           
         }else{
-            let location = document.querySelector(".container3").offsetTop;  
-            window.scrollTo({ top: location, behavior: "smooth" });
-            $('#loading').fadeIn(3000);   
-            $('#loading').fadeOut();
-            $(".container4").delay(3000).fadeIn(2000);
+         $(".container4").delay(3000).fadeIn(2000);
             
         }
         
