@@ -140,7 +140,7 @@ window.onload = function() {
         card.addEventListener("drop", onDropCard);
     }
     // box 객체 이벤트 핸들러 연결하기
-    let boxArray = document.querySelectorAll(".box");
+    let boxArray = document.querySelectorAll(".showcard");
     for(let box of boxArray) {
         box.addEventListener("dragover",onDragOverBox);
         box.addEventListener("dragleave",onDragLeaveBox);
