@@ -20,7 +20,7 @@ $(window).ready(function () {
             $(".item").not().removeClass("selectitem");
             $(this).addClass("selectitem");
         }
-        $(".container2").fadeIn();
+        $(".container2").fadeIn(1500);
         let location = document.querySelector(".container2").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
