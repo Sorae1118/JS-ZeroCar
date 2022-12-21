@@ -54,8 +54,9 @@ function getCardsFromWords2(words) {    //단어를 넣어주고 div 태그 생�
     shuffleArray(words);
 
     for(let word of words) {
-        aCardHTML = `<div class="card" draggable="true" originalOrder="${count++}" currentOrder="${changeCount}">${word}</div>`
+        aCardHTML = `<div class="card" draggable="true" originalOrder="${count++}" data-aos="flip-left" data-aos-delay="600">${word}</div>`
         cardsHTML += aCardHTML;
+        console.log(aCardHTML);
     }
     // box 안에, 위에서 생성한 카드들을 추가한다.
     document.querySelector(".showcard").innerHTML = cardsHTML;
