@@ -48,15 +48,8 @@ function getCardsFromWords2(words) {    //단어를 넣어주고 div 태그 생�
         cardsHTML += aCardHTML;
     }
     // box 안에, 위에서 생성한 카드들을 추가한다.
-    document.querySelector(".randomCard").innerHTML = cardsHTML;
+    document.querySelector(".showcard").innerHTML = cardsHTML;
 }
-
-function randomNumber(min, max) {
-    if(max > 300)
-        max -= 100
-    return Math.random() * (max - min) + min;
-}
-
 
 function selectQuiz() {
     let quizNo = Math.floor(Math.random() * 4);
@@ -127,7 +120,7 @@ function onDragLeaveBox(ev) {
 function onDropBox(ev) {
     dragOverBox.appendChild(draggingCard); //append는 맨 뒤에 추가함
 }
-//==============================================
+
 window.onload = function() {
     let items = document.getElementsByClassName("item");
     console.log(items);
