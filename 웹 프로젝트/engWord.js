@@ -45,10 +45,11 @@ $(window).ready(function () {
     });
     $("#btn2").click( function(){
         console.log($(".item"));
-        
+        $(".item").not().removeClass("selectitem");
         $(".item").fadeIn(1500);
         let location = document.querySelector(".rank").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
+        
     })
 });
 
