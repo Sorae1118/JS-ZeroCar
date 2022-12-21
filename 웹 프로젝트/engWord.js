@@ -44,8 +44,8 @@ $(window).ready(function () {
         
     });
 
-    $('#loading').hide();
 
+    
     $("#btn2").click( function(){
         console.log($(".item"));
         $(".item").not().removeClass("selectitem");
