@@ -26,7 +26,7 @@ $(window).ready(function () {
     })
 
     
-    $("#checkBtn").click(function(){
+    $("#check").click(function(){
         $(".container3").fadeIn(2000);  
         let location = document.querySelector(".container3").offsetTop;  
         window.scrollTo({ top: location, behavior: "smooth" });
@@ -34,7 +34,8 @@ $(window).ready(function () {
 
     $('#loading').hide();
     $('#checkBtn').click(function(){
-        $('#loading').fadeIn(2000);    
+        $('#loading').fadeIn(2000);   
+        $('#loading').fadeOut(); 
     });
     $("#btn2").click( function(){
         console.log($(".item"));
@@ -46,7 +47,7 @@ $(window).ready(function () {
 
     
 });
-});
+
 
 //============================= 퀴즈 문제 ======================================
 function check(){
