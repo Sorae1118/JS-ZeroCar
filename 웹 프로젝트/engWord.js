@@ -24,21 +24,22 @@ $(window).ready(function () {
         let location = document.querySelector(".container2").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
-
-    $("#checkbtn").click( function(){
-        alert("정답입니다!!")
-        //let check = document.querySelectorAll(".draggable이나 cardBox1을 해서 찾아준후 roginalOrder 번호를 체크하여 찾으면되는데 그게안됨")
-        //check[1] 하면 정보가 나오긴하는데 정보에서 orginaleorder을 못가져오겟음
-        //draggable을 쿼리샐랙터올로해서 찾으면 웹사이트에서 순서를 바꿔도 바꾼채로 가져오는게 아니라 만들어진대로 그대로 가져옴 cardbox1을 가져와야할거같음
-    })
 });
 //============================= 퀴즈 문제 ======================================
-function check(){
+let quizNo;
+
+function check() {
+    let ans = answer(quizNo);
     let f = document.querySelectorAll(".card");
-    if(check == 5){
-        for(let i of f)
-        check += f[i].textContent
+    console.log(ans);
+    console.log(f);
+    for(let i = 0; i < ans.length; i++) {
+        if(f[i].textContent != ans[i]){
+            console.log("틀림");
+            return;
+        }
     }
+    console.log("정답");
 }
 
 function shuffleArray(array) {  //배열 셔플
@@ -49,7 +50,6 @@ function getCardsFromWords2(words) {    //단어를 넣어주고 div 태그 생�
     let cardsHTML = "";
     let aCardHTML = "";
     let count = 1;
-    let changeCount = 0;
 
     shuffleArray(words);
 
@@ -57,7 +57,6 @@ function getCardsFromWords2(words) {    //단어를 넣어주고 div 태그 생�
         aCardHTML = `<div class="card" draggable="true" originalOrder="${count++}" 
         data-aos="flip-left" data-aos-delay="600">${word}</div>`;
         cardsHTML += aCardHTML;
-        console.log(aCardHTML);
     }
     // box 안에, 위에서 생성한 카드들을 추가한다.
     document.querySelector(".showcard").innerHTML = cardsHTML;
@@ -65,7 +64,8 @@ function getCardsFromWords2(words) {    //단어를 넣어주고 div 태그 생�
 }
 
 function selectQuiz() {
-    let quizNo = Math.floor(Math.random() * 4);
+    quizNo = null;
+    quizNo = Math.floor(Math.random() * 4);
     console.log(quizNo);
     if(quizNo >= quizSet.quiz.length){
         console.log("퀴즈 번호가 범위를 벗어났습니다.");
@@ -74,7 +74,6 @@ function selectQuiz() {
     let korean = quizSet.quiz[quizNo].kor;
     let words = quizSet.quiz[quizNo].eng.split(" ");
     document.querySelector("#korean").innerHTML = korean;
-    console.log(words);
     getCardsFromWords2(words);
 }
 
@@ -152,6 +151,9 @@ function addEvent() {
         box.addEventListener("dragleave",onDragLeaveBox);
         box.addEventListener("drop", onDropBox);
     }
+    let btn = document.querySelector("#checkBtn");
+    btn.addEventListener("click", check);
+
     console.log(cardArray);
     console.log(boxArray);
 }

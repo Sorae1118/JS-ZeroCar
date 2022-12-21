@@ -25,4 +25,3 @@ function answer(quizNo) {
     let answerArray = quizSet.quiz[quizNo].eng.split(" ");
     return answerArray;
 }
-console.log(answer(2));
