@@ -176,6 +176,10 @@ body {
     justify-content: center;
 }
 
+#loading {
+    text-align: center;
+}
+
 #btn2 {
     border: none;
     font-size: 30px;

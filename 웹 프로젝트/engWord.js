@@ -39,8 +39,7 @@ $(window).ready(function () {
     $('#loading').hide();
     
     $('#checkBtn').click(function(){
-        
-        $('#loading').fadeIn(2000);   
+        $('#loading').fadeIn(3000);   
         $('#loading').fadeOut(); 
 
     });
