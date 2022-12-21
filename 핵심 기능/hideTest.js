@@ -76,8 +76,8 @@ function dragCards() {
             draggable.classList.add("dragging");
         });
 
-    draggables.addEventListener("dragend", () => {
-        draggable.classList.remove("dragging");
+        draggable.addEventListener("dragend", () => {
+            draggable.classList.remove("dragging");
         });
     });
     cardBox1.forEach(cardBox1 => {
