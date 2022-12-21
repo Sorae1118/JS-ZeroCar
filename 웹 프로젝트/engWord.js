@@ -129,9 +129,7 @@ window.onload = function() {
     for(let item of items) {
         item.addEventListener("click", selectQuiz);
     }
-    // 단어 카드들을 먼저 생성한다
-    //getCardsFromWords(quizWords);
-    selectQuiz(1);
+    
     // card 객체 이벤트 핸들러 연결하기
     let cardArray = document.querySelectorAll(".card"); // 모든 카드??
     for(let card of cardArray) {
@@ -142,7 +140,7 @@ window.onload = function() {
         card.addEventListener("drop", onDropCard);
     }
     // box 객체 이벤트 핸들러 연결하기
-    let boxArray = document.querySelectorAll(".box");
+    let boxArray = document.querySelectorAll(".showcard");
     for(let box of boxArray) {
         box.addEventListener("dragover",onDragOverBox);
         box.addEventListener("dragleave",onDragLeaveBox);
