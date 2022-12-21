@@ -51,6 +51,7 @@ function getCardsFromWords2(words) {    //단어를 넣어주고 div 태그 생�
     }
     // box 안에, 위에서 생성한 카드들을 추가한다.
     document.querySelector(".showcard").innerHTML = cardsHTML;
+    addEvent();
 }
 
 function selectQuiz() {
@@ -69,6 +70,7 @@ function selectQuiz() {
 
 //=========================== 이벤트 핸들러 연결 ============================
 function onDragStartCard(ev) {
+    console.log(this);
     draggingCard = this;    //이동 중인 특정 카드 this
     this.classList.add("draggingCard"); // 클래스 추가. 모든 HTML 속성은 classList 를 가지고 있음. 즉 여러개의 클래스를 쓸 수 있음
 }
@@ -105,8 +107,9 @@ function onDragLeaveCard(ev) {
 function onDropCard(ev) {
     this.parentNode.insertBefore(draggingCard, this); //모든 객체는 parentNode가 있음. insertBefore(삽입할 객체, 뒤에 위치하는 객체)
 }
-
-//=========================== 박스 ====================================
+//==============================================
+// class box 객체 이벤트 핸들러 영역
+//==============================================
 function onDragOverBox(ev) {
     ev.preventDefault();
     dragOverBox = this;
@@ -123,15 +126,8 @@ function onDropBox(ev) {
     dragOverBox.appendChild(draggingCard); //append는 맨 뒤에 추가함
 }
 
-window.onload = function() {
-    let items = document.getElementsByClassName("item");
-    console.log(items);
-    for(let item of items) {
-        item.addEventListener("click", selectQuiz);
-    }
-
-    // card 객체 이벤트 핸들러 연결하기
-    let cardArray = document.querySelectorAll(".card"); // 모든 카드??
+function addEvent() {
+    let cardArray = document.querySelectorAll(".card");
     for(let card of cardArray) {
         card.addEventListener("dragstart", onDragStartCard);
         card.addEventListener("dragend", onDragEndCard);
@@ -139,11 +135,21 @@ window.onload = function() {
         card.addEventListener("dragleave", onDragLeaveCard);
         card.addEventListener("drop", onDropCard);
     }
-    // box 객체 이벤트 핸들러 연결하기
+
     let boxArray = document.querySelectorAll(".showcard");
     for(let box of boxArray) {
         box.addEventListener("dragover",onDragOverBox);
         box.addEventListener("dragleave",onDragLeaveBox);
         box.addEventListener("drop", onDropBox);
+    }
+    console.log(cardArray);
+    console.log(boxArray);
+}
+
+window.onload = function() {
+    let items = document.getElementsByClassName("item");
+    console.log(items);
+    for(let item of items) {
+        item.addEventListener("click", selectQuiz);
     }
 }

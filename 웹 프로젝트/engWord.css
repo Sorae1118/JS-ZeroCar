@@ -125,7 +125,6 @@ body {
     height: 400px;
     font-size: 20px;
     align-items: center;
-    position: relative;
     margin: 20px;
     padding: 10px;
     background-color: #b5c1dc57;
@@ -151,4 +150,17 @@ body {
     word-break: keep-all;
     font-family: fa; 
     margin-top: 100px;
+}
+
+/*======= drag and drop ========*/
+.draggingCard { /* 드래그 중인 카드 */
+    border-color: red;
+}
+
+.overBox {
+    background-color: gray;
+}
+
+.overCard {
+    background-color: orange;
 }
