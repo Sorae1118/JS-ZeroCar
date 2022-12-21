@@ -37,16 +37,13 @@ $(window).ready(function () {
         $('#loading').fadeIn(3000);
         $('#loading').fadeOut();
         if(check()){
-           
+            
         }else{
          $(".container4").delay(3000).fadeIn(2000);
-            
+
         }
-        
     });
 
-
-    
     $("#btn2").click( function(){
         console.log($(".item"));
         $(".item").not().removeClass("selectitem");
