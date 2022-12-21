@@ -6,6 +6,11 @@ let dragOverCard = null;
 $(window).ready(function () {
     $("#title").hide();
     $(".start").hide();
+    $(".container2").hide();
+    $(".container3").hide();
+    $(".container4").hide();
+    $(".container5").hide();
+
     $("#title").fadeIn(1000);
     $(".start").delay(1000).fadeIn(1000);
 
@@ -13,7 +18,7 @@ $(window).ready(function () {
         let location = document.querySelector(".rank").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
-    $(".container2").hide();
+
     $(".item").click( function(){
         console.log($(".item"));
         if($(this)){
@@ -27,18 +32,18 @@ $(window).ready(function () {
 
     $("#checkBtn").click(function(){
         if(check()){
-            $(".container3").fadeIn(2000);  
-            let location = document.querySelector(".container3").offsetTop;  
+            $(".container3").fadeIn(2000);
+            let location = document.querySelector(".container3").offsetTop;
             window.scrollTo({ top: location, behavior: "smooth" });
-            $('#loading').fadeIn(3000);   
-            $('#loading').fadeOut(); 
-            
+            $('#loading').fadeIn(3000);
+            $('#loading').fadeOut();
+            $(".container3").fadeIn(2000);
         }else{
-            $(".container3").fadeIn(2000);  
             let location = document.querySelector(".container3").offsetTop;  
             window.scrollTo({ top: location, behavior: "smooth" });
             $('#loading').fadeIn(3000);   
-            $('#loading').fadeOut(); 
+            $('#loading').fadeOut();
+            $(".container4").delay(3000).fadeIn(2000);
             
         }
         
