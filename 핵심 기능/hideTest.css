@@ -115,11 +115,13 @@ body {
     display: flex;
     justify-content: center;
 }
-.cardBox1 {
-    display: flex;
-    justify-content: center;
+.cardcheckBox {
+    width: 200px;
+    height: 200px;
+    font-size: 50px;
     align-items: center;
-   
+    border: 3px solid yellow;
+    position: relative;
 }
 
 .draggable {
@@ -127,7 +129,7 @@ body {
     height: 70px;
     border: none;
     border-radius: 8px;
-        margin: 12px;
+    margin: 12px;
     cursor: move;
     font-size: 30px;
     color : rgb(250, 209, 62);
