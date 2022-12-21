@@ -59,7 +59,7 @@ function randomNumber(min, max) {
 
 
 function selectQuiz() {
-    let quizNo = Math.floor(Math.random() * 3);
+    let quizNo = Math.floor(Math.random() * 4);
     console.log(quizNo);
     if(quizNo >= quizSet.quiz.length){
         console.log("퀴즈 번호가 범위를 벗어났습니다.");
