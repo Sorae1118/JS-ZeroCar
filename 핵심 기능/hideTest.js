@@ -9,10 +9,6 @@ $(window).ready(function () {
         window.scrollTo({ top: location, behavior: "smooth" });
     })
     $(".item").click( function(){
-        if($(this)){
-            $(".item").not().removeClass("selectItem");
-            $(this).addClass("selectItem");
-        }
         let location = document.querySelector(".container2").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
