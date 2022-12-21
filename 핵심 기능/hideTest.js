@@ -54,6 +54,8 @@ function getCardsFromWords(words) {
 }
 
 function randomNumber(min, max) {
+    if(max > 300)
+        max -= 50
     return Math.random() * (max - min) + min;
 }
 
