@@ -25,16 +25,24 @@ $(window).ready(function () {
         window.scrollTo({ top: location, behavior: "smooth" });
     })
 
-    $("#check").click(function(){
-        $(".container3").fadeIn(2000);  
-        let location = document.querySelector(".container3").offsetTop;  
-        window.scrollTo({ top: location, behavior: "smooth" });
+    $("#checkBtn").click(function(){
+        if(check()){
+            $(".container3").fadeIn(2000);  
+            let location = document.querySelector(".container3").offsetTop;  
+            window.scrollTo({ top: location, behavior: "smooth" });
+        }else{
+            alert("틀렸습니다!")
+        }
+        
     });
 
     $('#loading').hide();
+    
     $('#checkBtn').click(function(){
+        
         $('#loading').fadeIn(2000);   
         $('#loading').fadeOut(); 
+
     });
     $("#btn2").click( function(){
         console.log($(".item"));
@@ -57,10 +65,11 @@ function check() {
     for(let i = 0; i < ans.length; i++) {
         if(f[i].textContent != ans[i]){
             console.log("틀림");
-            return;
+            return false;
         }
     }
     console.log("정답");
+    return true;
 }
 
 function shuffleArray(array) {  //배열 셔플
