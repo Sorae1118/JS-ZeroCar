@@ -1,4 +1,10 @@
-/* ==================== 폰트 =======================*/
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'GmarketSansBold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
@@ -7,20 +13,22 @@
 }
 
 @font-face {
-    src: url(BMJUA_otf.otf);
-    font-family: fa;
-}
-/* =================== body ======================*/
-body {
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: black;
-    overflow-x: hidden;
-    overflow-y: auto;
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* ============== section container 1 ==============*/
-#title { /* 영어단어 카드 게임 */
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+#dmd {
     font-family: fa;
     width: 100%;
     font-size: 50px;
@@ -31,7 +39,7 @@ body {
     color: white;
 }
 
-.start {
+.d1 {
     width: 100%;
     height: 30vh;
     text-align: center;
@@ -50,20 +58,6 @@ body {
     word-break: keep-all;
     font-family: fa;    
 }
-
-.click {
-    position: absolute;
-    right: +600px;
-    bottom: +283px;
-}
-
-/* ================== section rank ==================*/
-.rank {
-    padding: 250px;
-    display: flex;
-    justify-content: space-around;
-}
-
 .item {
     width: 200px;
     height: 100px;
@@ -77,11 +71,42 @@ body {
     font-family: fa;
 }
 
-.selectitem {
+.selectItem {
     background: rgb(234, 126, 18);
 }
 
-/* ================ section container2 ================*/
+#cardBox {
+    padding: 250px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.right {
+    background-color: blueviolet;
+    padding: 250px;
+    display: flex;
+    justify-content: space-around;
+}
+
+body {
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.blink {
+    -webkit-animation: blink 0.5s ease-in-out infinite alternate;
+    -moz-animation: blink 0.5s ease-in-out infinite alternate;
+    animation: blink 0.5s ease-in-out infinite alternate;
+}
+
+.click{
+    position: absolute;
+    right: +600px;
+    bottom: +283px;
+}
 .container2 {
     width: 100%;
     margin: 10px;
@@ -107,6 +132,7 @@ body {
     height: 200px;
 }
 
+
 .card {
     width: 123px;   
     border-radius: 8px;
@@ -117,7 +143,26 @@ body {
     margin: 20px;
 }
 
-.showcard {
+.draggable.dragging {
+    opacity: 0.5;
+}
+
+@font-face {
+    src: url(BMJUA_otf.otf);
+    font-family: fa;
+}
+
+
+.box{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius : 5px;
+    margin : 10px;
+    width : 30%;
+    color :rgb(250, 209, 62)
+}
+
+.randomCard {
     width: 100%;
     height: 400px;
     font-size: 20px;
@@ -130,12 +175,16 @@ body {
     justify-content: center;
     
 }
-
-.check {
+#korean {
+    color: white;
     text-align: center;
+    height: 100px;
+    width: 100%;
+    font-size: 30px;
+    font-family: fa;
 }
 
-#checkbtn{
+#checkBtn{
     border: none;
     font-size: 30px;
     cursor: pointer;
@@ -148,4 +197,7 @@ body {
     word-break: keep-all;
     font-family: fa; 
     margin-top: 100px;
+}
+.check {
+    text-align: center;
 }
