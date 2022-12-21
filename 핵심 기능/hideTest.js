@@ -44,11 +44,9 @@ function getCardsFromWords(words) {
         let x = randomNumber(xMin, xMax);
         let y = randomNumber(yMin, yMax);
       
-        newDiv.draggable="true"
         newDiv.style.position = 'absolute';
         newDiv.style.left = `${x}px`;
         newDiv.style.top = `${y}px`;
-
 
         field.appendChild(newDiv);
     }
