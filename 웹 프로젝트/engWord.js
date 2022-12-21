@@ -28,7 +28,8 @@ $(window).ready(function () {
     $('#loading').hide();
     $('#checkBtn').click(function(){
         $('#loading').fadeIn(2000);    
-    });
+        $('#loading').fadeOut();    
+    });      
 });
 
 //============================= 퀴즈 문제 ======================================
