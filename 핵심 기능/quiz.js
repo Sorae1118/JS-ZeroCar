@@ -9,7 +9,7 @@ let quizSet = {
         ,
         {
         eng: "I need you to help me",
-        kor: " 네가 도와주면 좋겠어",
+        kor: "네가 도와주면 좋겠어",
         }
         ,
         {
