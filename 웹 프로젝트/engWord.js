@@ -32,7 +32,7 @@ $(window).ready(function () {
         //draggable을 쿼리샐랙터올로해서 찾으면 웹사이트에서 순서를 바꿔도 바꾼채로 가져오는게 아니라 만들어진대로 그대로 가져옴 cardbox1을 가져와야할거같음
     })
 });
-//=========================== 퀴즈 문제 =========================================
+//============================= 퀴즈 문제 ======================================
 function shuffleArray(array) {  //배열 셔플
     array.sort(() => Math.random() - 0.5);
 }
@@ -67,7 +67,7 @@ function selectQuiz() {
     getCardsFromWords2(words);
 }
 
-//=========================== 이벤트 핸들러 연결 =======================
+//=========================== 이벤트 핸들러 연결 ============================
 function onDragStartCard(ev) {
     draggingCard = this;    //이동 중인 특정 카드 this
     this.classList.add("draggingCard"); // 클래스 추가. 모든 HTML 속성은 classList 를 가지고 있음. 즉 여러개의 클래스를 쓸 수 있음
@@ -129,7 +129,7 @@ window.onload = function() {
     for(let item of items) {
         item.addEventListener("click", selectQuiz);
     }
-    
+
     // card 객체 이벤트 핸들러 연결하기
     let cardArray = document.querySelectorAll(".card"); // 모든 카드??
     for(let card of cardArray) {
