@@ -33,6 +33,14 @@ $(window).ready(function () {
     })
 });
 //============================= 퀴즈 문제 ======================================
+function check(){
+    let f = document.querySelectorAll(".card");
+    if(check == 5){
+        for(let i of f)
+        check += f[i].textContent
+    }
+}
+
 function shuffleArray(array) {  //배열 셔플
     array.sort(() => Math.random() - 0.5);
 }
