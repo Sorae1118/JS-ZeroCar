@@ -48,11 +48,10 @@ $(window).ready(function () {
             
         }else{
             $(".container5").delay(3000).fadeIn(2000);
-
         }
     });
 
-    $("#btn2").click( function(){
+    $("#btn2").click( function() {
         console.log($(".item"));
         $(".item").not().removeClass("selectitem");
         $(".item").fadeIn(1500);
