@@ -31,18 +31,16 @@ $(window).ready(function () {
     })
 
     $("#checkBtn").click(function(){
+        $(".container3").show();
+        let location = document.querySelector(".container3").offsetTop;
+        window.scrollTo({ top: location, behavior: "smooth" });
+        $('#loading').fadeIn(3000);
+        $('#loading').fadeOut();
         if(check()){
-            $(".container3").fadeIn(2000);
-            $('#loading').fadeIn(3000);
-            let location = document.querySelector(".container3").offsetTop;
-            window.scrollTo({ top: location, behavior: "smooth" });
-            //$('#loading').fadeOut();
+            
         }else{
-            $(".container3").fadeIn(2000);
-            $('#loading').fadeIn(3000);
-            let location = document.querySelector(".container3").offsetTop;
-            window.scrollTo({ top: location, behavior: "smooth" });
-            //$('#loading').fadeOut();
+         $(".container4").delay(3000).fadeIn(2000);
+
         }
     });
 
