@@ -26,41 +26,17 @@ $(window).ready(function () {
     })
 });
 
-//정호
-function getCardsFromWords(words) {
-    let field = document.querySelector('.randomCard');
-    field.innerHTML="";
-    let fieldRect = field.getBoundingClientRect();
-    let xMin = 0;
-    let yMin = 0;
-    let xMax = fieldRect.width;
-    let yMax = fieldRect.height;
-
-    let cardsHTML = "";
-    let newDiv = "";
-    let count = 1;
-    let changeCount = 0;
-    for(let word of words) { //단어 만큼 div를 만들어줌
-        //newDiv = `<div draggable="true" originalOrder="${count++}" currentOrder="${changeCount}">${word}</div>`
-        let newDiv = document.createElement('div');
-        newDiv.classList.add("draggable");
-        newDiv.innerHTML = word;
-
-        let x = randomNumber(xMin, xMax);
-        let y = randomNumber(yMin, yMax);
-      
-        newDiv.draggable = true;
-        newDiv.style.position = 'absolute';
-        newDiv.style.left = `${x}px`;
-        newDiv.style.top = `${y}px`;
-        field.appendChild(newDiv);
-    }
-}
 function getCardsFromWords2(words) {
     let cardsHTML = "";
     let aCardHTML = "";
     let count = 1;
     let changeCount = 0;
+
+    function shuffleArray(array) {
+        array.sort(() => Math.random() - 0.5);
+    }
+    shuffleArray(words);
+
     for(let word of words) {
         aCardHTML = `<div class="card" draggable="true" originalOrder="${count++}" currentOrder="${changeCount}">${word}</div>`
         cardsHTML += aCardHTML;
@@ -86,6 +62,7 @@ function selectQuiz() {
     let korean = quizSet.quiz[quizNo].kor;
     let words = quizSet.quiz[quizNo].eng.split(" ");
     document.querySelector("#korean").innerHTML = korean;
+    console.log(words);
     getCardsFromWords2(words);
 }
 
