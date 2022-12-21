@@ -3,11 +3,11 @@ let quizSet = {
     author: "허봉식",
     quiz: [
         {
-            eng: "How was your day?",
+            eng: "How was your day ?",
             kor: "오늘 하루 어땠어?"
         },
         {
-            eng: "What’s the weather like?",
+            eng: "What’s the weather like ?",
             kor: "날씨가 어때?"
         },
         {
