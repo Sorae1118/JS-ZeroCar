@@ -38,7 +38,7 @@ $(window).ready(function () {
         console.log($(".item"));
         
         $(".item").fadeIn(1500);
-        let location = document.querySelector(".container2").offsetTop;
+        let location = document.querySelector(".rank").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
 
