@@ -28,6 +28,7 @@ $(window).ready(function () {
 //정호
 function getCardsFromWords(words) {
     let field = document.querySelector('.randomCard');
+    field.innerHTML="";
     let fieldRect = field.getBoundingClientRect();
     let xMin = 0;
     let yMin = 0;
@@ -53,17 +54,15 @@ function getCardsFromWords(words) {
 
         field.appendChild(newDiv);
     }
-
-    // box 안에, 위에서 생성한 카드들을 추가한다.
-    //let card = document.querySelector(".randomCard");
-    //card.innerHTML = cardsHTML;
 }
 
 function randomNumber(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-function selectQuiz(quizNo) {
+function selectQuiz() {
+    let quizNo = Math.floor(Math.random() * 3);
+    console.log(quizNo);
     if(quizNo >= quizSet.quiz.length){
         console.log("퀴즈 번호가 범위를 벗어났습니다.");
         return;
@@ -118,8 +117,14 @@ function dragCards() {
         ).element;
     }
 }
-
+function clickButton() {
+ 
+}
 window.onload = function () {
-    selectQuiz(1);
+    let items = document.getElementsByClassName("item");
+    console.log(items);
+    for(let item of items) {
+        item.addEventListener("click", selectQuiz);
+    }
     dragCards();
 }
