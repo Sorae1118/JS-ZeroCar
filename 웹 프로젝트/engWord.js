@@ -25,10 +25,24 @@ $(window).ready(function () {
         window.scrollTo({ top: location, behavior: "smooth" });
     })
 
-    $('#loading').hide();
-    $('#checkBtn').click(function(){
-        $('#loading').fadeIn(2000);    
+    
+    $("#checkBtn").click(function(){
+        $(".container3").fadeIn(2000);  
+        let location = document.querySelector(".container3").offsetTop;  
+        window.scrollTo({ top: location, behavior: "smooth" });
     });
+
+    $('#loading').hide();
+
+    $("#btn2").click( function(){
+        console.log($(".item"));
+        
+        $(".item").fadeIn(1500);
+        let location = document.querySelector(".container2").offsetTop;
+        window.scrollTo({ top: location, behavior: "smooth" });
+    })
+
+    
 });
 
 //============================= 퀴즈 문제 ======================================
