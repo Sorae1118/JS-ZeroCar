@@ -91,7 +91,7 @@ function selectQuiz() {
 
 function dragCards() {
     const draggables = document.querySelectorAll(".draggable");
-    const containers = document.querySelectorAll(".randomCard");
+    const ca = document.querySelectorAll(".dropCard");
 
     draggables.forEach(draggable => {
         draggable.addEventListener("dragstart", () => {
@@ -102,35 +102,34 @@ function dragCards() {
             draggable.classList.remove("dragging");
         });
     });
-
-    containers.forEach(container => {
-        container.addEventListener("dragover", e => {
+    cardBox1.forEach(cardBox1 => {
+        cardBox1.addEventListener("dragover", e => {
             e.preventDefault();
-        const afterElement = getDragAfterElement(container, e.clientX);
-        const draggable = document.querySelector(".dragging");
-        if (afterElement === undefined) {
-            container.appendChild(draggable);
-        } else {
-            container.insertBefore(draggable, afterElement);
-        }
+            const afterElement = getDragAfterElement(cardBox1, e.clientX);
+            const draggable = document.querySelector(".dragging");
+            if (afterElement === undefined) {
+                cardBox1.appendChild(draggable);
+            } else {
+                cardBox1.insertBefore(draggable, afterElement);
+            }
         });
     });
 
-    function getDragAfterElement(container, x) {
+    function getDragAfterElement(cardBox1, x) {
         const draggableElements = [
-        ...container.querySelectorAll(".draggable:not(.dragging)"),
+            ...cardBox1.querySelectorAll(".draggable:not(.dragging)"),
         ];
 
         return draggableElements.reduce(
             (closest, child) => {
-            const box = child.getBoundingClientRect();
-            const offset = x - box.left - box.width / 2;
-            // console.log(offset);
-            if (offset < 0 && offset > closest.offset) {
-                return { offset: offset, element: child };
-            } else {
-                return closest;
-            }
+                const box = child.getBoundingClientRect();
+                const offset = x - box.left - box.width / 2;
+                // console.log(offset);
+                if (offset < 0 && offset > closest.offset) {
+                    return { offset: offset, element: child };
+                } else {
+                    return closest;
+                }
             },
             { offset: Number.NEGATIVE_INFINITY },
         ).element;
@@ -145,5 +144,5 @@ window.onload = function () {
     for(let item of items) {
         item.addEventListener("click", selectQuiz);
     }
-    //dragCards();
+    dragCards();
 }
