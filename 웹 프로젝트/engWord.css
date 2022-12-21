@@ -117,30 +117,21 @@ body {
     display: flex;
     justify-content: center;
 }
-.cardcheckBox {
-    width: 200px;
-    height: 200px;
-    font-size: 50px;
-    align-items: center;
-    position: relative;
-}
+
 .dropCard {
     width: 100%;
     height: 200px;
 }
 
-.draggable {
-    width: 120px;
-    height: 70px;
-    border: none;
+
+.card {
+    width: 123px;   
     border-radius: 8px;
-    margin: 12px;
-    cursor: move;
-    font-size: 30px;
-    color : rgb(250, 209, 62);
+    color: rgb(250, 209, 62);
     border: 3px solid yellow;
     text-align: center;
-    z-index: 1;
+    float: left;
+    margin: 20px;
 }
 
 .draggable.dragging {
@@ -165,12 +156,14 @@ body {
 .randomCard {
     width: 100%;
     height: 400px;
-    font-size: 50px;
+    font-size: 20px;
     align-items: center;
     position: relative;
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
     background-color: #b5c1dc57;
+    display: flex;
+    justify-content: center;
     
 }
 #korean {
