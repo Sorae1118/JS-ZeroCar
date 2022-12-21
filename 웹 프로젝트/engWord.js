@@ -42,10 +42,12 @@ $(window).ready(function () {
     })
 
     $("#checkBtn").click(function(){
+        $(".container3").fadeOut();
         if(check()){
             $(".container4").fadeIn();
+            
         }else{
-         $(".container4").delay(3000).fadeIn(2000);
+            $(".container5").delay(3000).fadeIn(2000);
 
         }
     });
