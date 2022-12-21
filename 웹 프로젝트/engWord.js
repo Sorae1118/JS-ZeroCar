@@ -24,7 +24,28 @@ $(window).ready(function () {
         let location = document.querySelector(".container2").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
+
+    $("#check").click(function(){
+        $(".container3").fadeIn(2000);  
+        let location = document.querySelector(".container3").offsetTop;  
+        window.scrollTo({ top: location, behavior: "smooth" });
+    });
+
+    $('#loading').hide();
+    $('#checkBtn').click(function(){
+        $('#loading').fadeIn(2000);   
+        $('#loading').fadeOut(); 
+    });
+    $("#btn2").click( function(){
+        console.log($(".item"));
+        
+        $(".item").fadeIn(1500);
+        let location = document.querySelector(".rank").offsetTop;
+        window.scrollTo({ top: location, behavior: "smooth" });
+    })
 });
+
+
 //============================= 퀴즈 문제 ======================================
 let quizNo;
 
