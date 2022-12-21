@@ -3,6 +3,17 @@ let draggingCard = null;
 let dragOverBox = null; 
 let dragOverCard = null;
 //============================= Jquery 사용 ====================================
+$(document).ready(function(){
+    $("#checkBtn").click(function(){
+        $(".container3").show();
+        let location = document.querySelector(".container3").offsetTop;
+        window.scrollTo({ top: location, behavior: "smooth" });
+        $("#loading").delay(3000).fadeOut(1000);
+    });
+
+
+
+});
 $(window).ready(function () {
     $("#title").hide();
     $(".start").hide();
@@ -30,20 +41,11 @@ $(window).ready(function () {
         window.scrollTo({ top: location, behavior: "smooth" });
     })
 
-    $("#checkBtn").click(function() {
-        let tf = check();
-        $(".container3").show();
-        let location = document.querySelector(".container3").offsetTop;
-        window.scrollTo({ top: location, behavior: "smooth" });
-        $("#loading").fadeOut(2000);
-        if(tf) {
-            $(".container4").delay(1000).fadeIn(2000);
-            let location = document.querySelector(".container4").offsetTop;
-            window.scrollTo({ top: location, behavior: "smooth" });
-        }else {
-            $(".container5").delay("slow").fadeIn(2000);
-            let location = document.querySelector(".container5").offsetTop;
-            window.scrollTo({ top: location, behavior: "smooth" });
+    $("#checkBtn").click(function(){
+        if(check()){
+            $(".container4").fadeIn();
+        }else{
+         $(".container4").delay(3000).fadeIn(2000);
         }
     });
 
