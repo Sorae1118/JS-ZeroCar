@@ -1,20 +1,22 @@
 let quizSet = {
     topic: "기말과제 예제 제시",
     author: "서정호",
-    quiz : [
+    quiz: [
         {
-        eng: "so programming is the way I think we should be dbing that.",
-        kor: "그래서 프로그램이 우리가 그렇게 해야만 하는 바로 그 방법이라고 생각해.",
-        }
-        ,
+            eng: "How was your day ?",
+            kor: "오늘 하루 어땠어?"
+        },
         {
-        eng: "I need you to help me",
-        kor: "네가 도와주면 좋겠어",
-        }
-        ,
+            eng: "What’s the weather like ?",
+            kor: "날씨가 어때?"
+        },
         {
-        eng: "i like listening to music",
-        kor: "나는음악듣는걸좋아해", 
+            eng: "Take your time, please.",
+            kor: "천천히 하세요."
+        },
+        {
+            eng: "That is what I’m saying.",
+            kor: "내 말이 그 말이야."
         }
     ]
 

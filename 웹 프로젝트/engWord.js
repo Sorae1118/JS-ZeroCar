@@ -131,7 +131,7 @@ function onDragLeaveCard(ev) {
 function onDropCard(ev) {
     this.parentNode.insertBefore(draggingCard, this); 
 }
-//========박스===================================================================
+//=============== 박스 ====================================
 function onDragOverBox(ev) {
     ev.preventDefault();
     dragOverBox = this;
