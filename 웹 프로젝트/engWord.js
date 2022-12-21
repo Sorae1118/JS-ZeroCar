@@ -30,22 +30,24 @@ $(window).ready(function () {
             $(".container3").fadeIn(2000);  
             let location = document.querySelector(".container3").offsetTop;  
             window.scrollTo({ top: location, behavior: "smooth" });
+            $('#loading').fadeIn(3000);   
+            $('#loading').fadeOut(); 
+            
         }else{
-            alert("틀렸습니다!")
+            $(".container3").fadeIn(2000);  
+            let location = document.querySelector(".container3").offsetTop;  
+            window.scrollTo({ top: location, behavior: "smooth" });
+            $('#loading').fadeIn(3000);   
+            $('#loading').fadeOut(); 
+            
         }
         
     });
 
     $('#loading').hide();
-    
-    $('#checkBtn').click(function(){
-        $('#loading').fadeIn(3000);   
-        $('#loading').fadeOut(); 
 
-    });
     $("#btn2").click( function(){
         console.log($(".item"));
-        
         $(".item").fadeIn(1500);
         let location = document.querySelector(".rank").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
