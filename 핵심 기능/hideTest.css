@@ -124,6 +124,10 @@ body {
     align-items: center;
     position: relative;
 }
+.dropCard {
+    width: 100%;
+    height: 200px;
+}
 
 .draggable {
     width: 120px;
@@ -135,9 +139,8 @@ body {
     font-size: 30px;
     color : rgb(250, 209, 62);
     border: 3px solid yellow;
-    float: left;
     text-align: center;
-    position: absolute;
+    z-index: 1;
 }
 
 .draggable.dragging {
@@ -169,6 +172,11 @@ body {
 }
 #korean {
     color: white;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    font-size: 30px;
+    font-family: fa;
 }
 
 #checkBtn{
