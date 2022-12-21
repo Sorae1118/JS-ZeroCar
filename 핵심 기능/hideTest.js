@@ -73,7 +73,7 @@ function selectQuiz() {
 
 function dragCards() {
     const draggables = document.querySelectorAll(".draggable");
-    const cardBox1 = document.querySelectorAll(".randomCard");
+    const cardBox1 = document.querySelectorAll(".cardBox1");
 
     draggables.forEach(draggable => {
         draggable.addEventListener("dragstart", () => {
