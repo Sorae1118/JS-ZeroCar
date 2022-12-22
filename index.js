@@ -46,11 +46,11 @@ $(window).ready(function () {
     $("#checkBtn").click(function(){
         $(".container3").delay(4000).fadeOut();
         if(check()){
-            $(".container4").hide()
-            $(".container4").delay(4000).fadeIn();
+            $(".container4").hide();
+            $(".container4").delay(4000).fadeIn(1000);
         }else{
-            $(".container5").hide()
-            $(".container5").delay(4000).fadeIn();
+            $(".container5").hide();
+            $(".container5").delay(4000).fadeIn(1000);
         }
     });
 
@@ -63,7 +63,9 @@ $(window).ready(function () {
     })
 
     $("#btn3").click( function() {
-        $(".container5").fadeOut();
+        $(".container5").hide();
+        $(".container2").hide();
+        $(".container2").fadeIn();
         let location = document.querySelector(".container2").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
     })
@@ -221,9 +223,12 @@ function addEvent() {
 }
 
 window.onload = function() {
+    
     let items = document.getElementsByClassName("item");
     console.log(items);
     for(let item of items) {
         item.addEventListener("click", selectQuiz);
     }
 }
+
+history.scrollRestoration = "manual"; //새로고침 시 top 0 

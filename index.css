@@ -148,6 +148,7 @@ body {
     word-break: keep-all;
     font-family: fa; 
     margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 /*======= drag and drop ========*/
@@ -186,7 +187,6 @@ body {
     word-break: keep-all;
     font-family: fa;   
     margin-bottom: 100px;   
-    margin-top: 50px; 
 }
 #btn3 {
     border: none;
@@ -204,7 +204,7 @@ body {
 }
 
 .check1 {
-    margin: 50px;
+    margin: 30px;
     padding: 50px;
 }
 .check1 img {
@@ -216,3 +216,8 @@ body {
     width: 300px;
 }
 
+.message {
+    font-family: fa;
+    color: rgb(250, 209, 62);
+    font-size: 30px;
+}
