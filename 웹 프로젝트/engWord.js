@@ -42,20 +42,26 @@ $(window).ready(function () {
     $("#checkBtn").click(function(){
         $(".container3").delay(4000).fadeOut();
         if(check()){
-            $(".container4").delay(2000).fadeIn();
-            
+            $(".container4").hide()
+            $(".container4").delay(4000).fadeIn();
         }else{
-            $(".container5").delay(2000).fadeIn();
+            $(".container5").hide()
+            $(".container5").delay(4000).fadeIn();
         }
     });
 
     $("#btn2").click( function() {
-        console.log($(".item"));
+        $(".container4").fadeOut();
         $(".item").not().removeClass("selectitem");
-        $(".item").fadeIn(1500);
         let location = document.querySelector(".rank").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
-        
+        $(".container2").fadeOut();
+    })
+
+    $("#btn3").click( function() {
+        $(".container5").fadeOut();
+        let location = document.querySelector(".container2").offsetTop;
+        window.scrollTo({ top: location, behavior: "smooth" });
     })
 });
 
