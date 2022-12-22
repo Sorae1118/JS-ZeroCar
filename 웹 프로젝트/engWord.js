@@ -6,6 +6,7 @@ let dragOverCard = null;
 $(document).ready(function(){
     $("#checkBtn").click(function(){
         $(".container3").show();
+        $("#loading").fadeIn(1000);
         let location = document.querySelector(".container3").offsetTop;
         window.scrollTo({ top: location, behavior: "smooth" });
         $("#loading").delay(3000).fadeOut(1000);
