@@ -10,9 +10,6 @@ $(document).ready(function(){
         window.scrollTo({ top: location, behavior: "smooth" });
         $("#loading").delay(3000).fadeOut(1000);
     });
-
-
-
 });
 $(window).ready(function () {
     $("#title").hide();
