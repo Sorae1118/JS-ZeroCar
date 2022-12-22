@@ -66,10 +66,11 @@ $(window).ready(function () {
 });
 
 //============================= 퀴즈 문제 ======================================
-let quizNo;
+let quizNo; //퀴즈 번호
+let rank;   //초급, 중급, 고급
 
 function check() {
-    let ans = answer(quizNo);
+    let ans = answer(quizNo, rank);
     let f = document.querySelectorAll(".card");
     console.log(ans);
     console.log(f);
@@ -105,15 +106,31 @@ function getCardsFromWords2(words) {    //단어를 넣어주고 div 태그 생�
 }
 
 function selectQuiz() {
-    quizNo = null;
-    quizNo = Math.floor(Math.random() * 4);
-    console.log(quizNo);
-    if(quizNo >= quizSet.quiz.length){
-        console.log("퀴즈 번호가 범위를 벗어났습니다.");
-        return;
+    quizNo = 0;
+    let korean = "";
+    let words = "";
+
+    if(this.id == "item1") {
+        rank = 1;
+        quizNo = Math.floor(Math.random() * quizSet.quiz1.length);
+        korean = quizSet.quiz1[quizNo].kor;
+        words = quizSet.quiz1[quizNo].eng.split(" ");
     }
-    let korean = quizSet.quiz[quizNo].kor;
-    let words = quizSet.quiz[quizNo].eng.split(" ");
+    if(this.id == "item2") {
+        rank = 2;
+        quizNo = Math.floor(Math.random() * quizSet.quiz2.length);
+        korean = quizSet.quiz2[quizNo].kor;
+        words = quizSet.quiz2[quizNo].eng.split(" ");
+    }
+    if(this.id == "item3") {
+        rank = 3;
+        quizNo = Math.floor(Math.random() * quizSet.quiz3.length);
+        korean = quizSet.quiz3[quizNo].kor;
+        words = quizSet.quiz3[quizNo].eng.split(" ");
+    }
+    console.log(rank);
+    console.log(quizNo);
+    
     document.querySelector("#korean").innerHTML = korean;
     getCardsFromWords2(words);
 }
