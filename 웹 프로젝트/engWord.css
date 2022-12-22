@@ -100,7 +100,7 @@ body {
 }
 
 .card {
-    width: 123px;   
+    width: 123px;
     border-radius: 8px;
     color: rgb(250, 209, 62);
     border: 3px solid yellow;
@@ -127,7 +127,7 @@ body {
     background-color: #b5c1dc57;
     display: flex;
     justify-content: center;
-    
+    border-radius : 7px;
 }
 
 .check {
@@ -151,11 +151,7 @@ body {
 
 /*======= drag and drop ========*/
 .draggingCard { /* 드래그 중인 카드 */
-    border-color: red;
-}
-
-.overBox {
-    background-color: gray;
+    border-color: orange;
 }
 
 .overCard {
