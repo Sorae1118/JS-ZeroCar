@@ -39,12 +39,12 @@ $(window).ready(function () {
     })
 
     $("#checkBtn").click(function(){
-        $(".container3").fadeOut();
+        $(".container3").delay(4000).fadeOut();
         if(check()){
-            $(".container4").fadeIn();
+            $(".container4").delay(2000).fadeIn();
             
         }else{
-            $(".container5").delay(3000).fadeIn(2000);
+            $(".container5").delay(2000).fadeIn();
         }
     });
 
