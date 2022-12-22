@@ -29,6 +29,10 @@ $(window).ready(function () {
     })
 
     $(".item").click( function(){
+        $(".container2").hide();
+        $(".container3").hide();
+        $(".container4").fadeOut();
+        $(".container5").fadeOut();
         console.log($(".item"));
         if($(this)){
             $(".item").not().removeClass("selectitem");
