@@ -187,7 +187,9 @@ body {
     border-radius: 30px;
     padding: 10px 40px;
     word-break: keep-all;
-    font-family: fa;    
+    font-family: fa;   
+    margin-bottom: 100px;   
+    margin-top: 50px; 
 }
 #btn3 {
     border: none;
@@ -200,10 +202,19 @@ body {
     border-radius: 30px;
     padding: 10px 40px;
     word-break: keep-all;
-    font-family: fa;    
+    font-family: fa; 
+    margin-bottom: 100px;   
 }
 
 .check1 {
     margin: 50px;
     padding: 50px;
 }
+.check1 img {
+    border-radius: 7px;
+}
+
+#false img {
+    width: 500px;
+}
+
