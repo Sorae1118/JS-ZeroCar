@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Document </title>
+    <style>
+        #output {
+            padding : 20px;
+            border : 1px solid gray;
+
+        }
+    </style>
+    <script>
+        //---------------------------------------
+        function gid(id) {
+            return document.getElementById(id);
+        }
+        function onKeyDown(ev){
+            if(ev.keyCode == 13) {
+                gid("output").innerHTML += gid("input").value + ",";
+                gid("input").value = "";
+            }
+            //지금까지 입력된 내용을 로칼스토리지에 함께 실시간으로 저장함
+            localStorage.setItem("words", gid("output").innerHTML);
+            
+        }
+        //--------------------------------------=
+        window.onload = function () {
+            gid("input").onkeydown = onKeyDown;
+            //이전에 저장된 값이 있으면 먼저 보여준다.
+            let previousWords = localStorage.getItem("words");
+            gid("output").innerHTML = previousWords;
+        }
+    </script>
+</head>
+<body>
+    <h1> localStorage Test </h1>
+    <hr>
+    Input: <input id="input">
+    <hr>
+
+    <div id = "output"></div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+//끌고 다닐 객체
+-ondragstart //필기 시작할때 click 상태에서 이동
+-ondragstart //끌고다니는동안
+-ondragend //해제 상황이 종료됨
+
+//끌고온 객체를 받아줄 수있는 객체
+-ondraggover // 드래깅 객체가 영역 위로 왔을 때
+-ondragleave // 드래깅 객체가 영역 밖으로 나갔을 때
+-ondrop 드래깅객체를 영역위에 놓았을때 
+
