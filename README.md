@@ -30,9 +30,8 @@
 <br>
 
 ## 📀 Function
-1. 로그인 / 로그아웃, 회원가입
-2. 게시글과 게시글 내의 댓글 기능
-3. 컴파일러 위젯 [sphere-engine](https://docs.sphere-engine.com/compilers/widget/integration)
+1. AOS (Animate on Scroll Library)
+2. Drag & Drop
 <br>
 
 ## 📺 화면구성
@@ -46,12 +45,15 @@
 * 스크롤 이벤트로 Aos 라이브러리 기능이 동작합니다. ![스크린샷 2023-12-25 오전 5 05 35](https://github.com/Sorae1118/JS-ZeroCar/assets/115053276/ef0f4446-bb00-4858-b39d-4f580fe02972)
 <br><br><br>
 
-3. 회원가입 화면
-* 회원가입 페이지입니다.<img width="1440" alt="스크린샷 2023-12-23 오후 7 54 29" src="https://github.com/Sorae1118/FinalPjt_JSP/assets/115053276/c661e91e-81fc-409d-8efb-8c336cb2a28b"><br><br><br>
+3. 단어 맞추기 화면
+* 단어 맞추기 페이지입니다.
+* 드래드 앤 드롭으로 단어를 이동하여 문장을 완성합니다![스크린샷 2023-12-25 오전 5 05 43](https://github.com/Sorae1118/JS-ZeroCar/assets/115053276/f8de50cc-3da1-465a-aeb6-9d3099fc3e81)
+<br><br><br>
 
-4. 게시글 화면
-* 여러 게시글을 확인할 수 있는 페이지입니다.
-* 가장 최근 게시물부터 보이도록 DB에서 호출합니다.<img width="1440" alt="스크린샷 2023-12-23 오후 7 53 16" src="https://github.com/Sorae1118/FinalPjt_JSP/assets/115053276/e92ab667-5e37-4d04-82e1-f3189a74a57f"><br><br><br>
+4. 결과 화면
+* 결과를 확인할 수 있는 페이지입니다.
+* 문장의 결과값을 정답이 들어있는 객체의 value와 비교하여 결과를 표시합니다.![스크린샷 2023-12-25 오전 5 05 51](https://github.com/Sorae1118/JS-ZeroCar/assets/115053276/8c31b68a-2e22-4208-840b-6d81621c9599)
+<br><br><br>
 
 
 
