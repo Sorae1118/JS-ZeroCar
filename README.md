@@ -30,7 +30,7 @@
 <br>
 
 ## 📀 Function
-1. AOS (Animate on Scroll Library) [GO](https://michalsnik.github.io/aos/)
+1. AOS (Animate on Scroll Library) [AOS](https://michalsnik.github.io/aos/)
 2. Drag & Drop
 <br>
 
