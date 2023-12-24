@@ -1,17 +1,15 @@
 # JavaScript를 활용한 영단어 카드게임 - 공차팀
-![title](https://github.com/Sorae1118/FinalPjt_JSP/assets/115053276/90590478-bde0-410d-bf85-cb4dfd226842) <br>
-
-## 프로젝트 소개
-* 개발자 또는 개발에 관심을 갖는 사용자들을 위한 커뮤니티입니다.
-* 커뮤니티의 기본적인 요소인 게시물의 기능을 다룹니다.
-* 코딩 테스트(컴파일러) 기능도 추가했습니다.
 <br>
 
-## 팀원 구성
+## 프로젝트 소개
+* 영단어 카드 게임입니다. 단어가 주어지면 해당 단어로 문법을 고려하여 문장을 완성합니다.
+* 문장의 결과에 따라 정답 또는 오답을 출력합니다.
+<br>
+
+## 공차팀 구성원
 |조담진|서정호|김민지|
 |---|---|---|
 |![image](https://github.com/Sorae1118/FinalPjt_JSP/assets/115053276/87d97c7c-2aa1-4ef8-bc00-833099c6bc3c)|![image](https://github.com/Sorae1118/FinalPjt_JSP/assets/115053276/e1b99fe3-6218-430f-8506-2492c779e362)|![image](https://github.com/Sorae1118/FinalPjt_JSP/assets/115053276/90bceb53-70e1-4b24-9149-9735d561c41f)|
-|웹디자인, API|필수 기능 구현|DB 설계 및 구축|
 |[Sorae1118](https://github.com/Sorae1118)|[jeongho77](https://github.com/jeongho77)|[minso00](https://github.com/minso00)|
 
 <br>
@@ -24,16 +22,8 @@
     <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 </div>
 
-- Backend
-<div style="display:flex; flex-direction:row;">
-    <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
-    <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white">
-    <img src="https://img.shields.io/badge/apache tomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=white">
-</div>
-
 - Tools & Environment
 <div style="display:flex; flex-direction:row;">
-    <img src="https://img.shields.io/badge/eclipse-2C2255?style=for-the-badge&logo=eclipseide&logoColor=white">
     <img src="https://img.shields.io/badge/visualstudiocode-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white">
 </div>
 <br>
